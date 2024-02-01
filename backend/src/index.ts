@@ -3,6 +3,7 @@ import cors from "cors"
 import "dotenv/config"
 import mongoose from 'mongoose'
 import userRoutes from "./Routes/users"
+import authRoutes from "./Routes/auth"
 import { error } from "console"
 
 
@@ -30,3 +31,4 @@ app.get('/test',(req : Request, res: Response) => {
 })
 
 app.use("/users", userRoutes)
+app.use("/auth",authRoutes)
